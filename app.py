@@ -19,6 +19,17 @@ def predict():
     mass=request.form.get('mass')
     pedi=request.form.get('pedi')
     age=request.form.get('age')
+
+    preg=int(preg)
+    plas=int(plas)
+    pres=int(pres)
+    skin=int(skin)
+    test=int(test)
+    mass=int(mass)
+    pedi=int(pedi)
+    age=int(age)
+    
+
     print( preg,plas,pres,skin,test,mass,pedi,age,'are the values of the variables')
     print(type(preg))
     prediction = loaded_model.predict([[preg,plas,pres,skin,test,mass,pedi,age]])
